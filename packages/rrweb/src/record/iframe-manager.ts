@@ -302,7 +302,7 @@ export class IframeManager {
     }
   }
 
-  public cleanup () {
+  public cleanup() {
     window.removeEventListener('message', this.boundHandleMessage);
   }
 }
