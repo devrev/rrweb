@@ -294,7 +294,7 @@ function buildNode(
         const value = specialAttributes[name];
         // handle internal attributes
         if (tagName === 'canvas' && name === 'rr_dataURL') {
-          const image = document.createElement('img');
+          const image = doc.createElement('img');
           image.onload = () => {
             const ctx = (node as HTMLCanvasElement).getContext('2d');
             if (ctx) {
@@ -529,6 +529,7 @@ function visit(mirror: Mirror, onVisit: (node: Node) => void) {
 
   for (const id of mirror.getIds()) {
     if (mirror.has(id)) {
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       walk(mirror.getNode(id)!);
     }
   }

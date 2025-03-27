@@ -265,6 +265,7 @@ export function transformAttribute(
 export function ignoreAttribute(
   tagName: string,
   name: string,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _value: unknown,
 ): boolean {
   return (tagName === 'video' || tagName === 'audio') && name === 'autoplay';
@@ -401,11 +402,6 @@ function onceIframeLoaded(
   }
   // use default listener
   iframeEl.addEventListener('load', listener);
-}
-
-function isStylesheetLoaded(link: HTMLLinkElement) {
-  if (!link.getAttribute('href')) return true; // nothing to load
-  return link.sheet !== null;
 }
 
 function onceStylesheetLoaded(
@@ -726,7 +722,7 @@ function serializeElementNode(
       );
 
       // create blank canvas of same dimensions
-      const blankCanvas = document.createElement('canvas');
+      const blankCanvas = doc.createElement('canvas');
       blankCanvas.width = (n as HTMLCanvasElement).width;
       blankCanvas.height = (n as HTMLCanvasElement).height;
       const blankCanvasDataURL = blankCanvas.toDataURL(
