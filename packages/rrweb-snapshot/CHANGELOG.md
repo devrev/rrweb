@@ -1,5 +1,15 @@
 # rrweb-snapshot
 
+## 2.0.0-alpha.15
+
+### Patch Changes
+
+- [#1468](https://github.com/rrweb-io/rrweb/pull/1468) [`4014305`](https://github.com/rrweb-io/rrweb/commit/40143059446cee5c042c007b1c2e976f36e172f5) Thanks [@eoghanmurray](https://github.com/eoghanmurray)! - inlineImages: during snapshot avoid adding an event listener for inlining of same-origin images (async listener mutates the snapshot which can be problematic)
+
+- [`db725cf`](https://github.com/rrweb-io/rrweb/commit/db725cfe9300d348bbdd5b5cd5ebfb977d982abc) Thanks [@kanishq1](https://github.com/kanishq1)! - Replay: Replace negative lookbehind in regexes from css parser as it causes issues with Safari 16
+
+- [`db725cf`](https://github.com/rrweb-io/rrweb/commit/db725cfe9300d348bbdd5b5cd5ebfb977d982abc) Thanks [@kanishq1](https://github.com/kanishq1)! - (when `recordCanvas: true`): ensure we use doc.createElement instead of document.createElement to allow use in non-browser e.g. jsdom environments
+
 ## 2.0.0-alpha.14
 
 ### Patch Changes
