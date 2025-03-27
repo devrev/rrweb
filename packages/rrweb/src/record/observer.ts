@@ -64,7 +64,7 @@ export let mutationBuffers: MutationBuffer[] = [];
 
 export const flushMutationBuffers = () => {
   mutationBuffers = [];
-}
+};
 
 // Event.path is non-standard and used in some older browsers
 type NonStandardEvent = Omit<Event, 'composedPath'> & {
@@ -472,9 +472,9 @@ function initInputObserver({
         maskInputFn,
       });
     } else if ((target as HTMLElement).classList.contains(maskInputClass)) {
-      text = "*".repeat(text.length)
+      text = '*'.repeat(text.length);
     }
-    
+
     cbWithDedup(
       target,
       userTriggeredOnInput

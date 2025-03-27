@@ -1,4 +1,3 @@
-
 import {
   serializedNode,
   serializedNodeWithId,
@@ -33,7 +32,8 @@ const tagNameRegex = new RegExp('[^a-z0-9-_:]');
 
 export const IGNORED_NODE = -2;
 
-const BLANK_IMAGE_SRC = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAABNJREFUCB1jZGBg+A/EDEwgAgQADigBA//q6GsAAAAASUVORK5CYII%3D';
+const BLANK_IMAGE_SRC =
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAWJQAAFiUBSVIk8AAAABNJREFUCB1jZGBg+A/EDEwgAgQADigBA//q6GsAAAAASUVORK5CYII%3D';
 
 export function genId(): number {
   return _id++;
@@ -787,19 +787,23 @@ function serializeElementNode(
     else image.addEventListener('load', recordInlineImage);
   }
   // dont store src of img with maskTextClass class
-  // replace src with blank png 
+  // replace src with blank png
   let maskTextClass = options.maskTextClass;
-  if (tagName === 'img' && attributes.class && typeof attributes.class === 'string'
-    && maskTextClass && typeof maskTextClass === 'string' &&
-    attributes.class.includes(maskTextClass)) {
+  if (
+    tagName === 'img' &&
+    attributes.class &&
+    typeof attributes.class === 'string' &&
+    maskTextClass &&
+    typeof maskTextClass === 'string' &&
+    attributes.class.includes(maskTextClass)
+  ) {
     const image = n as HTMLImageElement;
     const maskImg = () => {
-
       attributes.src = BLANK_IMAGE_SRC;
-      // set width & height in style attribute of img 
+      // set width & height in style attribute of img
       if (attributes.style && typeof attributes.style === 'string') {
         if (!attributes.style.includes('width')) {
-          attributes.style = `${attributes.style}; width: ${image.width}px;`
+          attributes.style = `${attributes.style}; width: ${image.width}px;`;
         }
         if (!attributes.style.includes('height')) {
           attributes.style = `${attributes.style}; height: ${image.height}px`;
@@ -807,7 +811,7 @@ function serializeElementNode(
       } else {
         attributes.style = `width: ${image.width}px; height: ${image.height}px`;
       }
-    }
+    };
     // The image content may not have finished loading yet.
     if (image.complete) maskImg();
     else image.onload = maskImg;
