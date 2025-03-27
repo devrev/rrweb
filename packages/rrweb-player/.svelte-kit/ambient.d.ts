@@ -25,7 +25,6 @@
  */
 declare module '$env/static/private' {
   export const GITHUB_STATE: string;
-  export const GIT_CLONE_PROTECTION_ACTIVE: string;
   export const npm_package_scripts_test_cross_platform_build: string;
   export const npm_package_devDependencies_rollup: string;
   export const npm_package_devDependencies__types_node: string;
@@ -91,7 +90,6 @@ declare module '$env/static/private' {
   export const npm_package_devDependencies_typescript: string;
   export const npm_package_devDependencies__types_connect: string;
   export const npm_package_description: string;
-  export const GOROOT_1_20_X64: string;
   export const NVM_DIR: string;
   export const npm_package_readmeFilename: string;
   export const npm_package_types: string;
@@ -110,9 +108,11 @@ declare module '$env/static/private' {
   export const RUNNER_USER: string;
   export const STATS_V3PS: string;
   export const CHROMEWEBDRIVER: string;
+  export const GOROOT_1_23_X64: string;
   export const JOURNAL_STREAM: string;
   export const GITHUB_WORKFLOW: string;
   export const _: string;
+  export const MEMORY_PRESSURE_WATCH: string;
   export const npm_package_scripts_lint: string;
   export const npm_config_registry: string;
   export const ACTIONS_RUNNER_ACTION_ARCHIVE_CACHE: string;
@@ -175,6 +175,7 @@ declare module '$env/static/private' {
   export const npm_config_version_git_message: string;
   export const GITHUB_REPOSITORY_ID: string;
   export const GITHUB_ACTIONS: string;
+  export const STATS_PIP: string;
   export const npm_lifecycle_event: string;
   export const npm_package_repository_url: string;
   export const npm_package_version: string;
@@ -192,6 +193,7 @@ declare module '$env/static/private' {
   export const npm_package_exports___node_import: string;
   export const GITHUB_SHA: string;
   export const GITHUB_RUN_ATTEMPT: string;
+  export const STATS_D_TC: string;
   export const npm_package_devDependencies__types_sade: string;
   export const npm_config_version_git_tag: string;
   export const npm_config_version_git_sign: string;
@@ -200,7 +202,6 @@ declare module '$env/static/private' {
   export const ANDROID_SDK_ROOT: string;
   export const npm_package_license: string;
   export const npm_config_strict_ssl: string;
-  export const LEIN_HOME: string;
   export const npm_package_scripts_format: string;
   export const GITHUB_PATH: string;
   export const JAVA_HOME: string;
@@ -216,7 +217,6 @@ declare module '$env/static/private' {
   export const ANDROID_HOME: string;
   export const GITHUB_SERVER_URL: string;
   export const GECKOWEBDRIVER: string;
-  export const LEIN_JAR: string;
   export const GHCUP_INSTALL_BASE_PREFIX: string;
   export const GITHUB_OUTPUT: string;
   export const npm_package_exports___types: string;
@@ -230,6 +230,7 @@ declare module '$env/static/private' {
   export const SGX_AESM_ADDR: string;
   export const CHROME_BIN: string;
   export const SELENIUM_JAR_PATH: string;
+  export const MEMORY_PRESSURE_WRITE: string;
   export const STATS_EXTP: string;
   export const npm_package_exports___node_polyfills_types: string;
   export const INIT_CWD: string;
@@ -267,7 +268,6 @@ declare module '$env/static/public' {}
 declare module '$env/dynamic/private' {
   export const env: {
     GITHUB_STATE: string;
-    GIT_CLONE_PROTECTION_ACTIVE: string;
     npm_package_scripts_test_cross_platform_build: string;
     npm_package_devDependencies_rollup: string;
     npm_package_devDependencies__types_node: string;
@@ -333,7 +333,6 @@ declare module '$env/dynamic/private' {
     npm_package_devDependencies_typescript: string;
     npm_package_devDependencies__types_connect: string;
     npm_package_description: string;
-    GOROOT_1_20_X64: string;
     NVM_DIR: string;
     npm_package_readmeFilename: string;
     npm_package_types: string;
@@ -352,9 +351,11 @@ declare module '$env/dynamic/private' {
     RUNNER_USER: string;
     STATS_V3PS: string;
     CHROMEWEBDRIVER: string;
+    GOROOT_1_23_X64: string;
     JOURNAL_STREAM: string;
     GITHUB_WORKFLOW: string;
     _: string;
+    MEMORY_PRESSURE_WATCH: string;
     npm_package_scripts_lint: string;
     npm_config_registry: string;
     ACTIONS_RUNNER_ACTION_ARCHIVE_CACHE: string;
@@ -417,6 +418,7 @@ declare module '$env/dynamic/private' {
     npm_config_version_git_message: string;
     GITHUB_REPOSITORY_ID: string;
     GITHUB_ACTIONS: string;
+    STATS_PIP: string;
     npm_lifecycle_event: string;
     npm_package_repository_url: string;
     npm_package_version: string;
@@ -434,6 +436,7 @@ declare module '$env/dynamic/private' {
     npm_package_exports___node_import: string;
     GITHUB_SHA: string;
     GITHUB_RUN_ATTEMPT: string;
+    STATS_D_TC: string;
     npm_package_devDependencies__types_sade: string;
     npm_config_version_git_tag: string;
     npm_config_version_git_sign: string;
@@ -442,7 +445,6 @@ declare module '$env/dynamic/private' {
     ANDROID_SDK_ROOT: string;
     npm_package_license: string;
     npm_config_strict_ssl: string;
-    LEIN_HOME: string;
     npm_package_scripts_format: string;
     GITHUB_PATH: string;
     JAVA_HOME: string;
@@ -458,7 +460,6 @@ declare module '$env/dynamic/private' {
     ANDROID_HOME: string;
     GITHUB_SERVER_URL: string;
     GECKOWEBDRIVER: string;
-    LEIN_JAR: string;
     GHCUP_INSTALL_BASE_PREFIX: string;
     GITHUB_OUTPUT: string;
     npm_package_exports___types: string;
@@ -472,6 +473,7 @@ declare module '$env/dynamic/private' {
     SGX_AESM_ADDR: string;
     CHROME_BIN: string;
     SELENIUM_JAR_PATH: string;
+    MEMORY_PRESSURE_WRITE: string;
     STATS_EXTP: string;
     npm_package_exports___node_polyfills_types: string;
     INIT_CWD: string;
