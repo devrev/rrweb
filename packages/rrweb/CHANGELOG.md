@@ -1,5 +1,26 @@
 # rrweb
 
+## 2.0.0-alpha.15
+
+### Patch Changes
+
+- [`db725cf`](https://github.com/rrweb-io/rrweb/commit/db725cfe9300d348bbdd5b5cd5ebfb977d982abc) Thanks [@kanishq1](https://github.com/kanishq1)! - Export `ReplayPlugin` from rrweb directly. Previously we had to do `import type { ReplayPlugin } from 'rrweb/dist/types';` now we can do `import type { ReplayPlugin } from 'rrweb';`
+
+- [#1468](https://github.com/rrweb-io/rrweb/pull/1468) [`4014305`](https://github.com/rrweb-io/rrweb/commit/40143059446cee5c042c007b1c2e976f36e172f5) Thanks [@eoghanmurray](https://github.com/eoghanmurray)! - inlineImages: during snapshot avoid adding an event listener for inlining of same-origin images (async listener mutates the snapshot which can be problematic)
+
+- [`db725cf`](https://github.com/rrweb-io/rrweb/commit/db725cfe9300d348bbdd5b5cd5ebfb977d982abc) Thanks [@kanishq1](https://github.com/kanishq1)! - Optimize performance of isParentRemoved by converting it to an iterative procedure
+
+- [`db725cf`](https://github.com/rrweb-io/rrweb/commit/db725cfe9300d348bbdd5b5cd5ebfb977d982abc) Thanks [@kanishq1](https://github.com/kanishq1)! - Replay: Replace negative lookbehind in regexes from css parser as it causes issues with Safari 16
+
+- [`db725cf`](https://github.com/rrweb-io/rrweb/commit/db725cfe9300d348bbdd5b5cd5ebfb977d982abc) Thanks [@kanishq1](https://github.com/kanishq1)! - Refactor to preclude the need for a continuous raf loop running in the background which is related to shadowDom
+
+- [#1295](https://github.com/rrweb-io/rrweb/pull/1295) [`d7cf8dd`](https://github.com/rrweb-io/rrweb/commit/d7cf8dd07547f6fb22ef82e341a88357c4053bd3) Thanks [@colingm](https://github.com/colingm)! - Return early for child same origin frames
+
+- Updated dependencies [[`4014305`](https://github.com/rrweb-io/rrweb/commit/40143059446cee5c042c007b1c2e976f36e172f5), [`db725cf`](https://github.com/rrweb-io/rrweb/commit/db725cfe9300d348bbdd5b5cd5ebfb977d982abc), [`db725cf`](https://github.com/rrweb-io/rrweb/commit/db725cfe9300d348bbdd5b5cd5ebfb977d982abc)]:
+  - rrweb-snapshot@2.0.0-alpha.15
+  - rrdom@2.0.0-alpha.15
+  - @rrweb/types@2.0.0-alpha.15
+
 ## 2.0.0-alpha.14
 
 ### Patch Changes
